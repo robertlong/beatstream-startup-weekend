@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html ng-app="beatstream">
 <head>
-<title>Beatstream</title>
+<title>BeatStream</title>
 
 <!-- Stylesheets go below here, in the order of dependency -->
 <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/css/bootstrap.css">
-<link rel="stylesheet" href="css/libs/slider.css">
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.3/css/base/jquery-ui.css">
 <link rel="stylesheet" href="css/app.css">
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,900,900italic' rel='stylesheet' type='text/css'>
 
@@ -78,21 +78,21 @@
 
 <section id="footer">
   <div class="footer-wrap">
-    <div ng-controller="NowPlayingCtrl" class="now-playing">
+    <div ng-model="song" ng-controller="NowPlayingCtrl" class="now-playing">
       <div class="song-text row">
         <div class="col-md-1 col-md-offset-5">
-          <img src="http://placehold.it/64x64" class="song-thumb">
+          <img src="{{song.icon}}" class="song-thumb">
         </div>
         <div class="col-md-2">
-          <p class="song-title">Song Title</p>
-          <p class="song-artist">Artist</p>
+          <p class="song-title">{{song.name}}</p>
+          <p class="song-artist">{{song.artist}}</p>
         </div>
       </div>
       <div class="media-controls">
-        <a class="glyphicon glyphicon-backward"></a>
+        <a ng-click="previous()" class="glyphicon glyphicon-backward"></a>
         <a ng-click="play()" class="glyphicon glyphicon-play"></a>
-        <a class="glyphicon glyphicon-pause"></a>
-        <a class="glyphicon glyphicon-forward"></a>
+        <a ng-click="pause()" class="glyphicon glyphicon-pause"></a>
+        <a ng-click="next()" class="glyphicon glyphicon-forward"></a>
         <div class="volume-slider">
       </div>
   </div>
@@ -134,7 +134,12 @@
 <script type='text/javascript' src='https://cdn.firebase.com/js/simple-login/1.2.0/firebase-simple-login.js'></script>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.1/angular.min.js'></script>
 <script src='https://cdn.firebase.com/libs/angularfire/0.6.0/angularfire.min.js'></script>
+<<<<<<< HEAD
 <script type='text/javascript' src='js/libs/bootstrap-slider.js'></script>
+=======
+<script type='text/javascript' src='https://cdn.firebase.com/js/client/1.0.2/firebase.js'></script>
+<script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.3/jquery-ui.js'></script>
+>>>>>>> Updated medie bar components
 <script type='text/javascript' src='js/libs/swfobject.js'></script>
 <script type='text/javascript' src='js/libs/jquery.rdio.js'></script>
 <script type='text/javascript' src='js/app.js'></script>

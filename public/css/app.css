@@ -40,6 +40,8 @@ body {
 
 .song-thumb {
   display: inline;
+  height: 50px;
+  width: 50px;
 }
 
 .song-text {
@@ -69,4 +71,8 @@ body {
 .song-card-thumb {
   max-width:100%;
   max-height:100%;
+}
+
+.volume-slider {
+  width: 150px;
 }
