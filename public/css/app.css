@@ -2,6 +2,12 @@ html,
 body {
   height: 100%;
 }
+.navbar {
+  background-color: #000000;
+  min-height: 50px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+}
 
 /* Wrapper for page content to push down footer */
 #wrap {
@@ -24,7 +30,7 @@ body {
 /* Set the fixed height of the footer here */
 #footer {
   height: 100px;
-  background-color: #f5f5f5;
+  background-color: #000000;
 }
 
 .footer-wrap {
@@ -40,10 +46,17 @@ body {
   display: inline;
 }
 
+.song-title {
+  color: #ffffff;
+}
+
+.song-artist {
+  color: #ffffff;
+}
+
 .media-controls {
   display: inline;
 }
-
 .song-card {
   max-width: 960px;
   margin: 0 auto;
