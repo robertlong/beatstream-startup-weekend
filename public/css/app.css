@@ -13,6 +13,10 @@ body {
   padding: 0 0 100px;
 }
 
+.user-avatar {
+  height: 22px;
+}
+
 #content {
   padding-top: 60px;
 }
@@ -38,4 +42,18 @@ body {
 
 .media-controls {
   display: inline;
+}
+
+.song-card {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.song-card-poster {
+  margin-bottom: 10px;
+}
+
+.song-card-thumb {
+  max-width:100%;
+  max-height:100%;
 }
