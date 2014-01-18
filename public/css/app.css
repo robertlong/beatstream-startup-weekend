@@ -22,3 +22,20 @@ body {
   height: 100px;
   background-color: #f5f5f5;
 }
+
+.footer-wrap {
+  display: inline;
+  text-align: center;
+}
+
+.song-thumb {
+  display: inline;
+}
+
+.song-text {
+  display: inline;
+}
+
+.media-controls {
+  display: inline;
+}

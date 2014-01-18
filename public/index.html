@@ -41,10 +41,14 @@
 <section id="footer">
   <div class="footer-wrap">
     <div ng-controller="NowPlayingCtrl" class="now-playing">
-      <img src="http://placehold.it/64x64" class="song-thumb">
-      <div class="song-text">
-        <p class="song-title">Song Title</p>
-        <p class="song-artist">Artist</p>
+      <div class="song-text row">
+        <div class="col-md-1 col-md-offset-5">
+          <img src="http://placehold.it/64x64" class="song-thumb">
+        </div>
+        <div class="col-md-1">
+          <p class="song-title">Song Title</p>
+          <p class="song-artist">Artist</p>
+        </div>
       </div>
       <div class="media-controls">
         <a class="glyphicon glyphicon-backward"></a>
