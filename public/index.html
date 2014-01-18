@@ -47,14 +47,16 @@
         <p class="song-artist">Artist</p>
       </div>
       <div class="media-controls">
-        <a href="#" class="glyphicon glyphicon-backward"></a>
-        <a href="#" class="glyphicon glyphicon-play"></a>
-        <a href="#" class="glyphicon glyphicon-pause"></a>
-        <a href="#" class="glyphicon glyphicon-forward"></a>
+        <a class="glyphicon glyphicon-backward"></a>
+        <a ng-click="play()" class="glyphicon glyphicon-play"></a>
+        <a class="glyphicon glyphicon-pause"></a>
+        <a class="glyphicon glyphicon-forward"></a>
         <div class="volume-slider">
       </div>
   </div>
 </section>
+
+<div id="rdio-api"></div>
 
 <!-- Scripts go below here, in the order of dependency -->
 <script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
