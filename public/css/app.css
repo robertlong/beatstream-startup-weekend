@@ -10,6 +10,9 @@ body {
   margin-bottom: 20px;
   border: 1px solid transparent;
 }
+.navbar-brand img{
+	height: 80px;
+}
 
 /* Wrapper for page content to push down footer */
 #wrap {
