@@ -1,4 +1,5 @@
 function NowPlayingCtrl ($scope) {
+	var nowPlaying = false;
 
 	$scope.song = {
 		icon: "",
@@ -23,13 +24,21 @@ function NowPlayingCtrl ($scope) {
   });
 
   $scope.play = function() {
-    Rdio.play('a171827', {
-    	initialPosition: 5
-    });
+  	if (!nowPlaying) {
+  		Rdio.play('a171827');
+  		nowPlaying = true;
+  	}
+  	else {
+  		Rdio.play();
+  	}
+    $('.glyphicon-play').hide();
+    $('.glyphicon-pause').show();
   };
 
   $scope.pause = function() {
   	Rdio.pause('a171827');
+  	$('.glyphicon-pause').hide();
+    $('.glyphicon-play').show();
   };
 
   $scope.next = function() {
