@@ -81,8 +81,8 @@
     <div ng-model="song" ng-controller="NowPlayingCtrl" class="now-playing">
       <img src="{{song.icon}}" class="song-thumb">
       <div class="song-text">
-          <p><span class="song-title">Believe{{song.name}}<span id="by">  by  </span>
-          <span class="song-artist">One Republic{{song.artist}}</span></p>
+          <p><span class="song-title">{{song.name}}<span id="by">  by  </span>
+          <span class="song-artist">{{song.artist}}</span></p>
       </div>
       <div class="media-controls">
         <a ng-click="previous()" class="glyphicon glyphicon-step-backward"></a>
@@ -104,18 +104,18 @@
       <div class="modal-body">
         <form role="form">
           <div class="form-group">
-            <label for="song-search">Find a song</label>
-            <input id="song-search" type="text" class="form-control" placeholder="Find a song...">
+            <label for="song-search">Find a song</label></br>
+            <input id="song-search" type="text" class="form-control" placeholder="Search...">
           </div>
           <div class="form-group">
             <label for="description">Add a description</label>
-            <textarea id="description" class="form-control" rows="3" placeholder="(optional)"></textarea>
+            <textarea id="description" class="form-control" rows="3" placeholder="(Optional)"></textarea>
           </div>
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-        <button ng-click="search()" type="button" class="btn btn-primary">Post Song</button>
+        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+        <button ng-click="search()" type="button" class="btn btn-primary pull-right">Post Song</button>
       </div>
     </div>
   </div>
