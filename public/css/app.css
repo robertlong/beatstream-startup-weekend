@@ -46,6 +46,10 @@ body {
   text-align: center;
 }
 
+.search-result: {
+  background-color: #fff;
+}
+
 .song-thumb {
   display: inline;
   height: 50px;
