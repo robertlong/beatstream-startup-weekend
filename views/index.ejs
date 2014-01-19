@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.3/css/base/jquery-ui.css">
 <link rel="stylesheet" href="css/app.css">
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,900,900italic' rel='stylesheet' type='text/css'>
-
+<script> <% if(user){ %>window.CurrentUser = { id:"<%= user.id %>", name:"<%= user.displayName %>",  icon:"<%= user._json.result.icon %>"}; <% } %> </script>
 </head>
 
 <body>
@@ -30,6 +30,7 @@
         <div class="form-group">
           <input id="people-search" type="text" class="form-control" placeholder="Find People, Friends, Artists">
         </div>
+        <span id="or">or</span>
       </form>
       <% if(!user){ %>
         <ul class="nav navbar-nav navbar-right">
