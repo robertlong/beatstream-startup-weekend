@@ -199,6 +199,7 @@ margin-bottom:-50px;
   padding:10px;
   position: relative;
   border-radius: 7px;
+  text-align:left;
 }
 
 .song-card-poster {
@@ -210,6 +211,8 @@ margin-bottom:-50px;
 #caption{
   font-style: italic;
   font-size: 16px;
+  text-align:left;
+  color:#ccc;
 }
 
 .song-card-poster img {
