@@ -30,7 +30,8 @@ body {
 }
 
 #content {
-  padding-top: 60px;
+  padding-top: 100px;
+  padding-bottom: 50px;
   text-align: center;
 }
 
@@ -45,10 +46,8 @@ body {
   text-align: center;
 }
 
-
-/* Custom CSS */
-.main-form {
-	margin-top: 18px;
+.search-result: {
+  background-color: #fff;
 }
 
 .song-thumb {
@@ -79,16 +78,20 @@ body {
   display: inline;
 }
 
-.song-card {
-  max-width: 960px;
-  margin: 0 auto;
+.song-cards-wrapper {
+  max-width: 425px;
+  padding: 10px;
+  text-align: center;
   background-color: #000000;
+}
+
+.song-card {
+  margin: 0 auto;
   color: #ffffff;
 }
 
 .song-card-poster {
   margin-bottom: 10px;
-  margin-top: 15px;
   text-align: left;
 }
 
