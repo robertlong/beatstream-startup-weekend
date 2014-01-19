@@ -15,7 +15,9 @@ function NowPlayingCtrl ($scope, $firebase) {
   postsRef.on('child_added', function(snapshot) {
     if (curSong === null) {
       curSong = 0;
-      Rdio.play(snapshot.val().song);
+      $('#rdio-api').bind('ready.rdio', function() {
+        Rdio.play(snapshot.val().song);
+      });
     }
 
     posts.push(snapshot.val());

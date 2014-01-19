@@ -34,7 +34,7 @@ function PostSongCtrl ($scope) {
       user: {
         id: CurrentUser.id,
         name: CurrentUser.name,
-        avatar: "http://graph.facebook.com/" + CurrentUser.id + "/picture"
+        avatar: CurrentUser.icon
       },
       song: data.key,
       artist: data.artist,
