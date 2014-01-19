@@ -14,33 +14,32 @@ function PostSongCtrl ($scope) {
 
   $('#song-search').typeahead({
     name: 'songs',
-    valueKey: 'title',
+    valueKey: 'name',
     rateLimitWait: 1000,
     remote: {
-      url:'http://developer.echonest.com/api/v4/song/search?api_key=VQ4LFKF3YHXENH7AO&combined=%QUERY&sort=song_hotttnesss-desc&bucket=id:rdio-US&bucket=tracks&limit=true',
+      url:'/api/search?query=%QUERY',
       filter: function(res) {
-        console.log(res.response.songs);
-        return res.response.songs;
+        return res.result.results;
       }
     },
     template: [
-      '<div class="search-result">{{title}} by {{artist_name}}</div>'
+      '<div class="search-result">',
+      '<img src="{{icon}}">{{name}} by {{artist}}</div>'
     ].join(''),
     engine: Hogan
   });
 
-  $('#song-search').on('typeahead:selected', function (object, datum) {
-
+  $('#song-search').on('typeahead:selected', function (object, data) {
     $scope.post = {
       user: {
         id: CurrentUser.id,
         name: CurrentUser.name,
         avatar: "http://graph.facebook.com/" + CurrentUser.id + "/picture"
       },
-      song: datum.tracks[0].foreign_id.split("rdio-US:track:")[1],
-      artist: datum.artist_name,
-      name: datum.title,
-      icon: "http://placehold.it/400x400",
+      song: data.key,
+      artist: data.artist,
+      name: data.name,
+      icon: data.icon400,
       createdAt: Firebase.ServerValue.TIMESTAMP
     };
   });

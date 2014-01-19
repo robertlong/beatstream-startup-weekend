@@ -30,13 +30,17 @@
         <div class="form-group">
           <input id="people-search" type="text" class="form-control" placeholder="Find People, Friends, Artists">
         </div>
-        <span id="or">or</span>
       </form>
+      <% if(!user){ %>
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <span class="loginme"><a href='/auth/rdio'>Login</a></span>
+          </li>
+        </ul>
+      <% } else { %>
       <form id="postsong" ng-controller="PostSongCtrl" class="main-form navbar-form navbar-left" role="search">
         <button ng-click="showModal()" type="submit" class="btn btn-default">Post Song</button>
       </form>
-
-
       
       <ul ng-model="user" ng-controller="AuthCtrl" class="nav navbar-nav navbar-right">
         <li ng-show="user" class="dropdown">
@@ -46,36 +50,17 @@
             <b class="caret"></b>
           </a>
           <ul class="dropdown-menu">
-            <span class="loginme"><li><a ng-click="logout()">Logout</a></li></span>
+            <span class="loginme"><li><a href='/logout'>Logout</a></li></span>
           </ul>
         </li>
-        <li>
-          <span class="loginme"><a ng-hide="user" ng-click="login()">Login</a></span>
-        </li>
       </ul>
+      <% } %>
     </div>
   </nav>
 
   <section id="content" class="container">
     <div id="collumns" class="row col-md-12 center-block">
-    <div id="left" class="col-md-4 pull-left">
-      <ul ng-model="user" ng-controller="AuthCtrl" class="nav navbar-nav navbar-middle">
-        <li ng-show="user" class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            <img class="user-avatar" src="{{user.avatar}}">
-            <span class="loginme">{{user.name}}</span>
-            <b class="caret"></b>
-          </a>
-          <ul class="dropdown-menu">
-            <span class="loginme"><li><a ng-click="logout()">Logout</a></li></span>
-          </ul>
-        </li>
-        <li>
-          <span class="loginme"><a ng-hide="user" ng-click="login()">Login</a></span>
-        </li>
-      </ul>
-    </div>
-    <div id="middle" class="col-md-4">
+    <div id="middle" class="center-block">
       <div ng-controller="SongsCtrl" class="song-cards-wrapper">
       <div ng-repeat="song in songs | orderByPriority | reverse">
         <div class="song-card">
@@ -95,9 +80,6 @@
           <div class="space"></div>
         </div>
       </div>
-    </div>
-    <div id="right" class="col-md-4">
-      SUGESSITON BOX
     </div>
   </section>
 </div>

@@ -182,7 +182,7 @@ height: 70px;
   margin: 0 auto ;
   color: #ffffff;
   background-color: #000000;
-	padding:10px;
+  padding:10px;
   position: relative;
 }
 
@@ -193,13 +193,13 @@ height: 70px;
   font-weight: 500;
 }
 #caption{
-	font-style: italic;
-	font-size: 16px;
+  font-style: italic;
+  font-size: 16px;
 }
 
 .song-card-poster img {
-	margin-right: 1em;
-	border: 1px solid #ffffff;
+  margin-right: 1em;
+  border: 1px solid #777;
 }
 
 .song-card-thumb {
@@ -249,12 +249,12 @@ height: 70px;
 }
 
 input {
-	font-weight: 100;
+  font-weight: 100;
 }
 
 #by{
-	font-weight: 100;
-	font-style: italic;
+  font-weight: 100;
+  font-style: italic;
 }
 
 #or{
@@ -276,21 +276,21 @@ form {
 }
 
 .loginme {
-	color: #ffffff;
+  color: #ffffff;
 }
 
 #postsong {
   padding-left:15px;
 }
 #description {
-	max-width:100%;
+  max-width:100%;
 }
 .modal-footer{
-	width:100%;
+  width:100%;
 }
 .space{
-	height:30px;
-	background-color:#ffffff;
+  height:30px;
+  background-color:#ffffff;
 }
 
 .dropdown-menu {
@@ -349,7 +349,7 @@ a:hover {
 }
 
 .user-avatar {
-border: 1px solid #ffffff;
 height: 40px;
 margin-right: 5px;
+border: 1px solid #777;
 }
