@@ -45,6 +45,12 @@ body {
   text-align: center;
 }
 
+
+/* Custom CSS */
+.main-form {
+	margin-top: 18px;
+}
+
 .song-thumb {
   display: inline;
   height: 50px;
