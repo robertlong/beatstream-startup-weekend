@@ -174,7 +174,7 @@ input {
 
 form {
   display: inline;
-  text-align: center;
+  text-align: left;
 }
 
 #nav .loginme a{
@@ -185,4 +185,10 @@ form {
 
 #postsong {
   padding-left:50px;
+}
+#description {
+	max-width:100%;
+}
+.modal-footer{
+	width:100%;
 }
