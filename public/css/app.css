@@ -51,6 +51,12 @@ body {
   width: 50px;
 }
 
+.user-profile-thumb {
+  display: inline;
+  height: 64px;
+  width: 64px;
+}
+
 .song-text {
   display: inline;
 }
@@ -66,13 +72,18 @@ body {
 .media-controls {
   display: inline;
 }
+
 .song-card {
   max-width: 960px;
   margin: 0 auto;
+  background-color: #000000;
+  color: #ffffff;
 }
 
 .song-card-poster {
   margin-bottom: 10px;
+  margin-top: 15px;
+  text-align: left;
 }
 
 .song-card-thumb {
@@ -85,5 +96,14 @@ body {
 }
 
 .glyphicon-pause {
+  display: none;
+}
+
+.modal-footer {
+  color: #ffffff;
+  background-color: #000000;
+}
+
+#rdio-api {
   display: none;
 }
