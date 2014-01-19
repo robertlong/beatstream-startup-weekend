@@ -2,7 +2,6 @@ html,
 body {
   height: 100%;
   font-family: 'Roboto', sans-serif;
-  color:#ffffff;
 }
 
 .navbar {
@@ -354,4 +353,8 @@ a:hover {
 height: 40px;
 margin-right: 5px;
 border: 1px solid #777;
+}
+.song-card-date{
+	font-weight:100;
+	font-style:italic;
 }
