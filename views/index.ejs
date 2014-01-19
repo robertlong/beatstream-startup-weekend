@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="css/app.css">
 <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic,900,900italic' rel='stylesheet' type='text/css'>
 <script> <% if(user){ %>window.CurrentUser = { id:"<%= user.id %>", name:"<%= user.displayName %>",  icon:"<%= user._json.result.icon %>"}; <% } %> </script>
+<script> window.playbackToken = "<%= playbackToken %>";</script>
 </head>
 
 <body>

@@ -67,7 +67,13 @@ app.configure(function() {
 });
 
 app.get('/', function(req, res){
-  res.render('index', { user: req.user });
+  var rdio = new Rdio([RDIO_API_KEY, RDIO_SHARED_SECRET]);
+  var domain = req.headers.host === 'localhost:3000' ? 'localhost' : req.headers.host;
+
+  rdio.call('getPlaybackToken', {domain: domain}, function(err, data){
+    console.log(data);
+    res.render('index', { user: req.user, playbackToken: data.result});
+  });
 });
 
 // GET /auth/rdio
