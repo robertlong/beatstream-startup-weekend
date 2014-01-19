@@ -55,6 +55,8 @@ body {
   display: inline;
   height: 50px;
   width: 50px;
+  margin-right:10px;
+  vertical-align:0.4em;
 }
 
 .user-profile-thumb {
