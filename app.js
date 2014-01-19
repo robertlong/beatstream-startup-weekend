@@ -115,7 +115,7 @@ app.get('/api/search', apiEnsureAuthenticated, function(req, res) {
   });
 });
 
-app.listen(3000);
+app.listen(process.env.PORT || 3000);
 
 // Simple route middleware to ensure user is authenticated.
 //   Use this route middleware on any resource that needs to be protected.  If
