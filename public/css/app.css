@@ -100,6 +100,15 @@ body {
   margin-bottom: 10px;
   text-align: left;
   max-width: 400px;
+  font-weight: 500;
+}
+#caption{
+	font-style: italic;
+	font-size: 16px;
+}
+
+.song-card-poster img {
+	margin-right: 1em;
 }
 
 .song-card-thumb {
@@ -131,4 +140,12 @@ body {
   left: 1px;
   bottom: 1px;
   visibility: hidden;
+}
+
+input {
+	font-weight: 100;
+}
+#by{
+	font-weight: 100;
+	font-style: italic;
 }
