@@ -119,7 +119,7 @@
         <button ng-click="showModal()" type="submit" class="btn btn-default">Post Song</button>
         </form>
       </div>
-      <div class="media-controls pull-right">
+      <div class="media-controls navbar-fixed-bottom">
         <a ng-click="previous()" class="glyphicon glyphicon-step-backward"></a>
         <a ng-click="play()" class="glyphicon glyphicon-play"></a>
         <a ng-click="pause()" class="glyphicon glyphicon-pause"></a>
@@ -129,7 +129,7 @@
   </div>
 </section>
 
-<div ng-model="post" ng-controller="PostSongCtrl" id="post-song-modal" class="modal fade">
+<div ng-controller="PostSongCtrl" id="post-song-modal" class="modal fade">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
