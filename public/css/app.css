@@ -2,6 +2,7 @@ html,
 body {
   height: 100%;
   font-family: 'Roboto', sans-serif;
+  background-color: #d4d7d7;
 }
 
 .navbar {
@@ -35,7 +36,13 @@ margin-top: 25px;
 }
 
 #middle {
-  width: 34%;
+  width: 40%;
+  background-color:#BFBFBF;
+	-webkit-box-shadow: 0 0 5px#888 inset;
+	box-shadow: 0 0 5px #888 inset;
+	padding-top: 30px;
+margin-top: -3px;
+margin-bottom:-50px;
 }
 
 #right {
@@ -291,7 +298,6 @@ form {
 }
 .space{
   height:30px;
-  background-color:#ffffff;
 }
 
 .dropdown-menu {
