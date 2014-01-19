@@ -15,6 +15,11 @@ body {
 	padding:0px;
 }
 
+#search-bar {
+  margin-right: 3em;
+  padding-right: 50px;
+}
+
 #collumns {
   width: 100%;
   text-align: center;
@@ -24,6 +29,9 @@ body {
   width: 33%;
   height: 200%;
   background-color: #000000;
+  padding-bottom: 3em;
+  padding-top: 2em;
+  display: inline;
 }
 
 #middle {
@@ -156,6 +164,11 @@ body {
   margin-bottom:10px;
 }
 
+#post-song {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
 .volume-slider {
   margin-left: 10px;
   width: 150px;
@@ -242,6 +255,7 @@ a.dropdown-toggle {
   text-align: right;
 }
 
+
 ul .login-logout {
   text-align: left;
   background-color: #000000;
@@ -251,5 +265,30 @@ ul .login-logout {
 
 li {
   display: list-item;
-  text-align: right;
+  text-align: center;
+  color: #ffffff;
+}
+
+li.dropdown.open, li.dropdown > .open > a:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.nav > li > a:hover, .nav > li > a:focus {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+a {
+  color: #ffffff;
+
+}
+
+a:hover {
+  color: #cccccc;  
 }

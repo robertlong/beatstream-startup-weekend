@@ -26,7 +26,7 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse">
-      <form ng-controller="SearchCtrl" class="main-form navbar-form navbar-left" role="search">
+      <!-- <form ng-controller="SearchCtrl" class="main-form navbar-form navbar-left" role="search">
         <div class="form-group">
           <input type="text" class="form-control" placeholder="People, Friends, Artists">
         </div>
@@ -34,10 +34,15 @@
       </form>
       <form id="postsong" ng-controller="PostSongCtrl" class="main-form navbar-form navbar-left" role="search">
         <button ng-click="showModal()" type="submit" class="btn btn-default">Post Song</button>
+      </form> -->
+
+
+      <form ng-controller="SearchCtrl" class="search main-form navbar-form pull-right" role="search">
+        <div class="form-group">
+          <input type="text" id="search-bar" class="form-control" placeholder="Find People, Friends, Artists">
+        </div>
       </form>
-
-
-      <ul ng-model="user" ng-controller="AuthCtrl" class="nav navbar-nav navbar-right">
+      <!-- <ul ng-model="user" ng-controller="AuthCtrl" class="nav navbar-nav navbar-right">
         <li ng-show="user" class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
             <img class="user-avatar" src="{{user.avatar}}">
@@ -51,14 +56,13 @@
         <li>
           <span class="loginme"><a ng-hide="user" ng-click="login()">Login</a></span>
         </li>
-      </ul>
+      </ul> -->
     </div>
   </nav>
 
   <section id="content" class="container">
-    <div id="collumns" class="row col-md-12">
-    <div id="left" class="col-md-4">
-      LOG IN AND PROFILE INFO<br><br>
+    <div id="collumns" class="row col-md-12 center-block">
+    <div id="left" class="col-md-4 pull-left">
       <ul ng-model="user" ng-controller="AuthCtrl" class="nav navbar-nav navbar-middle">
         <li ng-show="user" class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -109,6 +113,11 @@
       <div class="song-text pull-left">
           <p><span class="song-title">{{song.name}}<span id="by">&nbsp;by&nbsp;</span>
           <span class="song-artist">{{song.artist}}</span></p>
+      </div>
+      <div id="post" class="center-block">
+        <form id="post-song" ng-controller="PostSongCtrl" class="main-form navbar-form navbar-fixed-bottom center-block" role="search">
+        <button ng-click="showModal()" type="submit" class="btn btn-default">Post Song</button>
+        </form>
       </div>
       <div class="media-controls pull-right">
         <a ng-click="previous()" class="glyphicon glyphicon-step-backward"></a>
