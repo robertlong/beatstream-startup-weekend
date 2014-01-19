@@ -23,6 +23,12 @@ height: 70px;
 margin-top: 5px;
 }
 
+.nav-center {
+  width: auto;
+  display: inline;
+  margin-left: 33.5%;
+}
+
 #collumns {
   width: 100%;
   text-align: center;
