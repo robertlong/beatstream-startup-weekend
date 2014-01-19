@@ -123,5 +123,12 @@ body {
 }
 
 #rdio-api {
-  display: none;
+  height: 50px;
+  width: 50px;
+  background-color: #000000;
+  color: #000000;
+  position: absolute;
+  left: 1px;
+  bottom: 1px;
+  visibility: hidden;
 }
