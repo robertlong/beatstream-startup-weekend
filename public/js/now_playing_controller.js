@@ -10,22 +10,38 @@ function NowPlayingCtrl ($scope, $firebase) {
   var posts = [];
 
   var postsRef = FirebaseRef.child('posts');
-  var curSong = null;
 
-  postsRef.on('child_added', function(snapshot) {
-    if (curSong === null) {
-      curSong = 0;
+  SongState.songIndex = null;
+
+  
+
+  postsRef.on('value', function(data) {
+    posts = _.sortBy(data.val(), function(post) {
+      return post.createdAt;
+    }).reverse();
+
+    if (SongState.songIndex === null) {
+      SongState.songIndex = 0;
       $('#rdio-api').bind('ready.rdio', function() {
-        $("#rdio-api").rdio().play(snapshot.val().song);
+        $("#rdio-api").rdio().play(posts[SongState.songIndex].song);
       });
     }
-
-    posts.push(snapshot.val());
   });
 
   $('#rdio-api').bind('playingTrackChanged.rdio', function(e, playingTrack, sourcePosition) {
     $scope.song = playingTrack;
+    SongState.playing = true;
     setTimeout(function(){ $scope.$apply();});
+  });
+
+  $('#rdio-api').bind('playStateChanged.rdio', function(e, playState) {
+    if (playState === 0) {
+      $('.glyphicon-play').show();
+      $('.glyphicon-pause').hide();
+    } else {
+      $('.glyphicon-play').hide();
+      $('.glyphicon-pause').show();
+    }
   });
 
   // Docs availible here: http://www.eyecon.ro/bootstrap-slider/
@@ -34,40 +50,44 @@ function NowPlayingCtrl ($scope, $firebase) {
     value: 50,
     slide: function(event, ui) {
       var volume = ui.value;
-      console.log(volume);
       $("#rdio-api").rdio().setVolume(volume/100);
     }
   });
 
   $scope.play = function() {
-    if (!nowPlaying) {
-      $("#rdio-api").rdio().play(posts[curSong].song);
-      nowPlaying = true;
+    if (!SongState.playing) {
+      $("#rdio-api").rdio().play(posts[SongState.songIndex].song);
     }
     else {
       $("#rdio-api").rdio().play();
     }
-    $('.glyphicon-play').hide();
-    $('.glyphicon-pause').show();
   };
 
   $scope.pause = function() {
-    $("#rdio-api").rdio().pause(posts[curSong].song);
-    $('.glyphicon-pause').hide();
-    $('.glyphicon-play').show();
+    $("#rdio-api").rdio().pause(posts[SongState.songIndex].song);
   };
 
   $scope.next = function() {
-    curSong++;
-    console.log(posts[curSong].song);
-    $("#rdio-api").rdio().play(posts[curSong].song);
+    if (SongState.songIndex < posts.length - 1) {
+      SongState.songIndex++;
+    }
+
+    $('html, body').animate({
+        scrollTop: $(".song-card").eq(SongState.songIndex).offset().top - $('#nav').height() - 20
+    }, 1000);
+    
+    $("#rdio-api").rdio().play(posts[SongState.songIndex].song);
   };
 
   $scope.previous = function() {
-    if (curSong > 0) {
-      curSong--;
+    if (SongState.songIndex > 0) {
+      SongState.songIndex--;
     }
 
-    $("#rdio-api").rdio().play(posts[curSong].song);
+    $('html, body').animate({
+        scrollTop: $(".song-card").eq(SongState.songIndex).offset().top - $('#nav').height() - 20
+    }, 1000);
+
+    $("#rdio-api").rdio().play(posts[SongState.songIndex].song);
   };
 }

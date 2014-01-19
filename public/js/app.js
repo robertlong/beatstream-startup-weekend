@@ -3,6 +3,11 @@ var App = angular.module("beatstream", ["firebase", 'angularMoment']);
 
 var FirebaseRef = new Firebase('https://beatstream.firebaseio.com');
 
+var SongState = {
+  songIndex: null,
+  playing: false
+};
+
 App.filter('reverse', function() {
       function toArray(list) {
          var k, out = [];
