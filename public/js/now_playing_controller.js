@@ -1,4 +1,4 @@
-function NowPlayingCtrl ($scope) {
+function NowPlayingCtrl ($scope, $firebase) {
 	var nowPlaying = false;
 
 	$scope.song = {
@@ -7,45 +7,64 @@ function NowPlayingCtrl ($scope) {
 		artist: ""
 	};
 
-	$('#rdio-api').bind('playingTrackChanged.rdio', function(e, playingTrack, sourcePosition) {
-		$scope.song = playingTrack;
-		$scope.$apply();
-	})
+  var posts = [];
+
+  var postsRef = FirebaseRef.child('posts');
+  var curSong = null;
+
+  postsRef.on('child_added', function(snapshot) {
+    if (curSong === null) {
+      curSong = 0;
+    }
+
+    posts.push(snapshot.val());
+  });
+
+  $('#rdio-api').bind('playingTrackChanged.rdio', function(e, playingTrack, sourcePosition) {
+    $scope.song = playingTrack;
+    setTimeout(function(){ $scope.$apply();});
+  });
 
   // Docs availible here: http://www.eyecon.ro/bootstrap-slider/
   $('.volume-slider').slider({
-  	max: 100,
-  	value: 50,
-  	slide: function(event, ui) {
-  		var volume = ui.value;
-  		console.log(volume);
-  		Rdio.setVolume(volume/100);
-  	}
+    max: 100,
+    value: 50,
+    slide: function(event, ui) {
+      var volume = ui.value;
+      console.log(volume);
+      Rdio.setVolume(volume/100);
+    }
   });
 
   $scope.play = function() {
-  	if (!nowPlaying) {
-  		Rdio.play('a171827');
-  		nowPlaying = true;
-  	}
-  	else {
-  		Rdio.play();
-  	}
+    console.log(posts);
+    if (!nowPlaying) {
+      Rdio.play(posts[curSong].song);
+      nowPlaying = true;
+    }
+    else {
+      Rdio.play();
+    }
     $('.glyphicon-play').hide();
     $('.glyphicon-pause').show();
   };
 
   $scope.pause = function() {
-  	Rdio.pause('a171827');
-  	$('.glyphicon-pause').hide();
+    Rdio.pause(posts[curSong].song);
+    $('.glyphicon-pause').hide();
     $('.glyphicon-play').show();
   };
 
   $scope.next = function() {
-  	Rdio.next();
+    curSong++;
+    Rdio.play(posts[curSong].song);
   };
 
   $scope.previous = function() {
-  	Rdio.previous();
+    if (curSong > 0) {
+      curSong--;
+    }
+
+    Rdio.play(posts[curSong].song);
   };
 }
