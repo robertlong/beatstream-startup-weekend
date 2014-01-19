@@ -69,6 +69,7 @@ body {
 .song-text {
   display: inline-block;
   vertical-align: 1.75em;
+  margin-right: 10px;
 }
 
 .song-title p {
@@ -157,7 +158,19 @@ input {
 	font-weight: 100;
 	font-style: italic;
 }
-#nav .loginme a{
+
+#or{
+  margin-left: 1.75em;
+  font-weight: 200;
+  font-style: italic;
+  color: #ffffff;
+}
+
+
+form {
+  display: inline;
+  text-align: center;
+}#nav .loginme a{
     color: #FFFFFF;
     padding-right: 40px;
     padding-top:40px;
