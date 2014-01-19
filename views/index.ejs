@@ -73,7 +73,7 @@
             <span class="name-and-time">{{song.user.name}}<br></span>
             <span class='song-card-date' am-time-ago="song.createdAt | toDate"></span>
           </div>
-          <img ng-click="play(song.song)" class="song-card-thumb" ng-src="{{song.icon}}">
+          <img ng-click="play(song.song, $index)" class="song-card-thumb" ng-src="{{song.icon}}">
           <div class="cc songName"><div>
             {{song.name}} <span id="by">by</span> {{song.artist}} 
           </div>

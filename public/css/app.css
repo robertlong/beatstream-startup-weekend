@@ -327,10 +327,6 @@ form {
 }
 
 .dropdown-menu {
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> fixes changes back
   margin-right: 18px;
   background-color: #000000;
 }
@@ -338,13 +334,6 @@ form {
 a.dropdown-toggle {
   margin-right: 18px;
   background-color: transparent;
-=======
-  margin-right: 40px;
-}
-
-a.dropdown-toggle {
-  margin-right: 40px;
->>>>>>> fixes thé menu to be rad
   color: #ffffff;
 }
 
