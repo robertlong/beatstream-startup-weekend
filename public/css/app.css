@@ -2,7 +2,7 @@ html,
 body {
   height: 100%;
   font-family: 'Roboto', sans-serif;
-  /*background-color: #d4d7d7;*/
+  background-color: #d4d7d7;
 }
 
 .navbar {
@@ -313,17 +313,14 @@ form {
 
 .dropdown-menu {
   margin-right: 40px;
-  background-color: #000000;
 }
 
 a.dropdown-toggle {
   margin-right: 40px;
-  background-color: #000000;
   color: #ffffff;
 }
 
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-  background-color: #000000;
   color: #ffffff;
   text-align: right;
 }
@@ -331,7 +328,6 @@ a.dropdown-toggle {
 
 ul .login-logout {
   text-align: left;
-  background-color: #000000;
   color: #ffffff;
   text-align: right;
 }
@@ -343,17 +339,14 @@ li {
 }
 
 li.dropdown.open, li.dropdown > .open > a:hover {
-  background-color: #000000;
   color: #ffffff;
 }
 
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
-  background-color: #000000;
   color: #ffffff;
 }
 
 .nav > li > a:hover, .nav > li > a:focus {
-  background-color: #000000;
   color: #ffffff;
 }
 
@@ -389,4 +382,10 @@ height: 20px;
 cursor: default;
 margin-top: 2px;
 margin-right: .5px;
+}
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+    background-color: #4c5b67;
+}
+.dropdown-menu {
+	background-color: #000000;
 }
