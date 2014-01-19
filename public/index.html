@@ -80,12 +80,12 @@
 <section id="footer" class="navbar-fixed-bottom">
   <div class="footer-wrap navbar-fixed-bottom">
     <div ng-model="song" ng-controller="NowPlayingCtrl" class="now-playing">
-      <img src="{{song.icon}}" class="song-thumb">
-      <div class="song-text">
-          <p><span class="song-title">{{song.name}}<span id="by">  by  </span>
+      <img src="{{song.icon}}" class="pull-left song-thumb">
+      <div class="song-text pull-left">
+          <p><span class="song-title">{{song.name}}<span id="by">&nbsp;by&nbsp;</span>
           <span class="song-artist">{{song.artist}}</span></p>
       </div>
-      <div class="media-controls">
+      <div class="media-controls pull-right">
         <a ng-click="previous()" class="glyphicon glyphicon-step-backward"></a>
         <a ng-click="play()" class="glyphicon glyphicon-play"></a>
         <a ng-click="pause()" class="glyphicon glyphicon-pause"></a>

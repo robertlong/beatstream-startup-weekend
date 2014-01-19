@@ -61,8 +61,9 @@ body {
   display: inline;
   height: 50px;
   width: 50px;
+  margin-left: 5em;
   margin-right:10px;
-  vertical-align:0.4em;
+  margin-bottom: 12.5px;
 }
 
 .user-profile-thumb {
@@ -73,7 +74,7 @@ body {
 
 .song-text {
   display: inline-block;
-  vertical-align: 1.75em;
+  margin-top: 15px;
   margin-right: 10px;
 }
 
@@ -89,7 +90,8 @@ body {
 
 .media-controls {
   display: inline;
-  vertical-align: 1.75em;
+  margin-top: 15px;
+  margin-right: 5em;
 }
 
 .media-controls a {
