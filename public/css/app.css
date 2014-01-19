@@ -11,7 +11,7 @@ body {
   border: 1px solid transparent;
 }
 .navbar-brand{
-	height:50px;
+	height:70px;
 	padding:0px;
 }
 
@@ -294,4 +294,11 @@ a {
 
 a:hover {
   color: #cccccc;  
+}
+
+.user-avatar {
+	background-color: #777777;
+height: 40px;
+margin-right: 5px;
+padding: 2px;
 }
