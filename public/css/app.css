@@ -412,3 +412,6 @@ background-color: #282828;
     border-radius: 0 0 7px 7px;
     padding: 10px;
 }
+.login-link {
+  padding: 26px;
+}
