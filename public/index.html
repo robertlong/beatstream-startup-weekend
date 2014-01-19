@@ -26,22 +26,18 @@
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse">
-      <!-- <form ng-controller="SearchCtrl" class="main-form navbar-form navbar-left" role="search">
+      <form ng-controller="SearchCtrl" class="main-form navbar-form navbar-left" role="search">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="People, Friends, Artists">
+          <input type="text" class="form-control" placeholder="Find People, Friends, Artists">
         </div>
         <span id="or">or</span>
       </form>
       <form id="postsong" ng-controller="PostSongCtrl" class="main-form navbar-form navbar-left" role="search">
         <button ng-click="showModal()" type="submit" class="btn btn-default">Post Song</button>
-      </form> -->
-
-
-      <form ng-controller="SearchCtrl" class="main-form navbar-form navbar-left" role="search">
-        <div class="form-group">
-          <input type="text" class="form-control" placeholder="Find People, Friends, Artists">
-        </div>
       </form>
+
+
+      
       <ul ng-model="user" ng-controller="AuthCtrl" class="nav navbar-nav navbar-right">
         <li ng-show="user" class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -113,11 +109,6 @@
       <div class="song-text pull-left">
           <p><span class="song-title">{{song.name}}<span id="by">&nbsp;by&nbsp;</span>
           <span class="song-artist">{{song.artist}}</span></p>
-      </div>
-      <div id="post" class="center-block">
-        <form id="post-song" ng-controller="PostSongCtrl" class="main-form navbar-form navbar-fixed-bottom center-block" role="search">
-        <button ng-click="showModal()" type="submit" class="btn btn-default">Post Song</button>
-        </form>
       </div>
       <div class="media-controls navbar-fixed-bottom">
         <a ng-click="previous()" class="glyphicon glyphicon-step-backward"></a>
