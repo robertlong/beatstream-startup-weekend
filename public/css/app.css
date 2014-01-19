@@ -45,6 +45,7 @@ body {
 .footer-wrap {
   display: inline;
   text-align: center;
+  color:#ffffff;
 }
 
 .search-result: {
@@ -71,10 +72,12 @@ body {
 
 .song-title p {
   color: #ffffff;
+  font-weight: 500;
 }
 
 .song-artist p {
   color: #ffffff;
+  font-weight: 500;
 }
 
 .media-controls {
