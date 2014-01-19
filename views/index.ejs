@@ -42,11 +42,11 @@
         <button ng-click="showModal()" type="submit" class="btn btn-default">Post Song</button>
       </form>
       
-      <ul ng-model="user" ng-controller="AuthCtrl" class="nav navbar-nav navbar-right">
-        <li ng-show="user" class="dropdown">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-            <img class="user-avatar" ng-src="{{user.avatar}}">
-            <span class="loginme">{{user.name}}</span>
+            <img class="user-avatar" src="<%= user._json.result.icon %>">
+            <span class="loginme"><%= user.displayName %></span>
             <b class="caret"></b>
           </a>
           <ul class="dropdown-menu">
