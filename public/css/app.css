@@ -186,3 +186,12 @@ form {
 #postsong {
   padding-left:50px;
 }
+
+#nav .loginme a{
+    color: #FFFFFF;
+    margin-right: 40px;
+    margin-top: 40px;
+} 
+#postsong {
+padding-left:15px;
+}
