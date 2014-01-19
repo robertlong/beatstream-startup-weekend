@@ -31,7 +31,7 @@ height: 70px;
 #left {
   width: 33%;
   height: 200%;
-  background-color: #000000;
+  background-color: #444444;
   padding-bottom: 3em;
   padding-top: 2em;
   display: inline;
@@ -44,7 +44,7 @@ height: 70px;
 
 #right {
   width: 33%;
-  background-color: #000000;
+  background-color: #444444;
 }
 
 /* Wrapper for page content to push down footer */
