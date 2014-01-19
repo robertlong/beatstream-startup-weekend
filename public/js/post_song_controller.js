@@ -5,7 +5,7 @@ function PostSongCtrl ($scope) {
     artist:"",
     name:"",
     description: "",
-    icon: ""
+    icon: "http://placehold.it/400x400"
   };
 
   $scope.showModal = function() {
@@ -16,7 +16,7 @@ function PostSongCtrl ($scope) {
     name: 'songs',
     valueKey: 'title',
     remote: {
-      url:'http://developer.echonest.com/api/v4/song/search?api_key=VQ4LFKF3YHXENH7AO&combined=%QUERY&sort=song_hotttnesss-desc&bucket=id:rdio-US&bucket=id:7digital-US&bucket=tracks&limit=true',
+      url:'http://developer.echonest.com/api/v4/song/search?api_key=VQ4LFKF3YHXENH7AO&combined=%QUERY&sort=song_hotttnesss-desc&bucket=id:rdio-US&bucket=tracks&limit=true',
       filter: function(res) {
         console.log(res.response.songs);
         return res.response.songs;
@@ -30,19 +30,19 @@ function PostSongCtrl ($scope) {
 
   $('#song-search').on('typeahead:selected', function (object, datum) {
 
+    console.log()
+
     $scope.post = {
+      user: {
+        id: CurrentUser.id,
+        name: CurrentUser.name,
+        avatar: "http://graph.facebook.com/" + CurrentUser.id + "/picture"
+      },
       song: datum.tracks[0].foreign_id.split("rdio-US:track:")[1],
       artist: datum.artist_name,
-      name: datum.title
+      name: datum.title,
+      icon: "http://placehold.it/400x400"
     };
-
-    for (var i = 0; i < datum.tracks.length; i++) {
-      if (datum.tracks[i].catalog === "7digital-US") {
-        $scope.post.icon = datum.tracks[i].release_image;
-        break;
-      }
-    }
-
   });
 
   $scope.postSong = function() {

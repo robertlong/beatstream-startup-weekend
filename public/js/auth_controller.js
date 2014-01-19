@@ -9,9 +9,11 @@ function AuthCtrl ($scope) {
       console.log(user);
       user.avatar = "http://graph.facebook.com/" + user.id + "/picture";
       $scope.user = user;
+      window.CurrentUser = user;
     } else {
       console.log('logged out');
       $scope.user = null;
+      window.CurrentUser = null;
     }
     $scope.$apply();
   });

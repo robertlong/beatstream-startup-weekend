@@ -37,7 +37,6 @@ function NowPlayingCtrl ($scope, $firebase) {
   });
 
   $scope.play = function() {
-    console.log(posts);
     if (!nowPlaying) {
       Rdio.play(posts[curSong].song);
       nowPlaying = true;
@@ -57,6 +56,7 @@ function NowPlayingCtrl ($scope, $firebase) {
 
   $scope.next = function() {
     curSong++;
+    console.log(posts[curSong].song);
     Rdio.play(posts[curSong].song);
   };
 
