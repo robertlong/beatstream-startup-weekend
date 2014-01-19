@@ -198,6 +198,7 @@ margin-bottom:-50px;
   background-color: #000000;
   padding:10px;
   position: relative;
+  border-radius: 7px;
 }
 
 .song-card-poster {
