@@ -32,6 +32,7 @@ body {
   padding-bottom: 3em;
   padding-top: 2em;
   display: inline;
+  margin-bottom: 20px;
 }
 
 #middle {
@@ -131,7 +132,7 @@ body {
 .song-cards-wrapper {
   display: inline-block;
   max-width: 370px;
-  padding: 10px;
+  padding: 0 10px 10px 10px;
   text-align: center;
   margin: 0px auto;
 }
