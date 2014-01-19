@@ -383,8 +383,8 @@ margin-top: 2px;
 margin-right: .5px;
 }
 .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
-	background-color: #4c5b67;
+  background-color: #4c5b67;
 }
 .dropdown-menu {
-	background-color: #000000;
+	background-color: #4c5b67;
 }
