@@ -31,7 +31,7 @@ body {
 
 #content {
   padding-top: 100px;
-  padding-bottom: 50px;
+  padding-bottom: 25px;
   text-align: center;
 }
 
@@ -64,7 +64,7 @@ body {
 }
 
 .song-text {
-  display: inline;
+  display: inline-block;
 }
 
 .song-title p {
@@ -77,6 +77,10 @@ body {
 
 .media-controls {
   display: inline;
+}
+
+.media-controls a {
+  color: #ffffff;
 }
 
 .song-cards-wrapper {
@@ -115,6 +119,7 @@ body {
 .modal-footer {
   color: #ffffff;
   background-color: #000000;
+  display: inline;
 }
 
 #rdio-api {

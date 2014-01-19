@@ -76,17 +76,13 @@
   </section>
 </div>
 
-<section id="footer">
-  <div class="footer-wrap">
+<section id="footer" class="navbar-fixed-bottom">
+  <div class="footer-wrap navbar-fixed-bottom">
     <div ng-model="song" ng-controller="NowPlayingCtrl" class="now-playing">
-      <div class="song-text row">
-        <div class="col-md-1 col-md-offset-5">
+      <div class="song-text">
           <img src="{{song.icon}}" class="song-thumb">
-        </div>
-        <div class="col-md-2">
-          <p class="song-title">{{song.name}}</p>
-          <p class="song-artist">{{song.artist}}</p>
-        </div>
+          <p class="song-title">SONG NAME {{song.name}}</p>
+          <p class="song-artist">SONG ARTIST {{song.artist}}</p>
       </div>
       <div class="media-controls">
         <a ng-click="previous()" class="glyphicon glyphicon-step-backward"></a>
