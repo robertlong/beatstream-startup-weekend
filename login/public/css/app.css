@@ -2,7 +2,6 @@ html,
 body {
   height: 100%;
   font-family: 'Roboto', sans-serif;
-  color:#ffffff;
 }
 
 .navbar {
@@ -12,34 +11,8 @@ body {
   border: 1px solid transparent;
 }
 .navbar-brand{
-height: 70px;
-    margin-top: 5px;
-    padding: 0;
-}
-
-
-#collumns {
-  width: 100%;
-  text-align: center;
-}
-
-#left {
-  width: 33%;
-  height: 200%;
-  background-color: #444444;
-  padding-bottom: 3em;
-  padding-top: 1em;
-  display: inline;
-  margin-bottom: 20px;
-}
-
-#middle {
-  width: 34%;
-}
-
-#right {
-  width: 33%;
-  background-color: #444444;
+	height:50px;
+	padding:0px;
 }
 
 /* Wrapper for page content to push down footer */
@@ -159,23 +132,19 @@ height: 70px;
 
 .media-controls {
   display: inline;
-  text-align: right;
-  margin-bottom: 20px;
+  margin-top: 15px;
   margin-right: 5em;
 }
 
 .media-controls a {
   color: #ffffff;
-  font-size: 20px;
-  margin-right: 5px;
 }
 
 .song-cards-wrapper {
-  display: inline-block;
   max-width: 370px;
-  padding: 0 10px 10px 10px;
+  padding: 10px;
   text-align: center;
-  margin: 0px auto;
+  margin: auto;
 }
 
 .song-card {
@@ -199,19 +168,12 @@ height: 70px;
 
 .song-card-poster img {
 	margin-right: 1em;
-	border: 1px solid #ffffff;
 }
 
 .song-card-thumb {
   max-width:100%;
   max-height:100%;
   margin-bottom:10px;
-  border: 2px solid #999999;
-}
-
-#post-song {
-  margin-bottom: 20px;
-  text-align: center;
 }
 
 .song-card-date {
@@ -221,7 +183,6 @@ height: 70px;
 }
 
 .volume-slider {
-  margin-left: 10px;
   width: 150px;
   display: inline-block;
 }
@@ -275,10 +236,6 @@ form {
     margin-top:40px;
 }
 
-.loginme {
-	color: #ffffff;
-}
-
 #postsong {
   padding-left:15px;
 }
@@ -310,46 +267,7 @@ a.dropdown-toggle {
   text-align: right;
 }
 
-
-ul .login-logout {
-  text-align: left;
-  background-color: #000000;
-  color: #ffffff;
-  text-align: right;
-}
-
 li {
   display: list-item;
-  text-align: center;
-  color: #ffffff;
-}
-
-li.dropdown.open, li.dropdown > .open > a:hover {
-  background-color: #000000;
-  color: #ffffff;
-}
-
-.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
-  background-color: #000000;
-  color: #ffffff;
-}
-
-.nav > li > a:hover, .nav > li > a:focus {
-  background-color: #000000;
-  color: #ffffff;
-}
-
-a {
-  color: #ffffff;
-
-}
-
-a:hover {
-  color: #cccccc;  
-}
-
-.user-avatar {
-border: 1px solid #ffffff;
-height: 40px;
-margin-right: 5px;
+  text-align: right;
 }
