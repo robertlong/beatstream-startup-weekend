@@ -16,8 +16,10 @@ body {
 }
 
 #search-bar {
-  margin-right: 3em;
-  padding-right: 50px;
+  position: absolute;
+  vertical-align: middle;
+  text-align: center;
+  max-width: 20em;
 }
 
 #collumns {
