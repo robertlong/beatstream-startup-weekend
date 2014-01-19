@@ -29,7 +29,7 @@ passport.deserializeUser(function(obj, done) {
 passport.use(new RdioStrategy({
     consumerKey: RDIO_API_KEY,
     consumerSecret: RDIO_SHARED_SECRET,
-    callbackURL: "http://localhost:3000/auth/rdio/callback"
+    callbackURL: "/auth/rdio/callback"
   },
   function(token, tokenSecret, profile, done) {
     // asynchronous verification, for effect...
