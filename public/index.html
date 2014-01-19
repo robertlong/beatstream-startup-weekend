@@ -17,7 +17,7 @@
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
         <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
+        <span class="icon-bar">
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
@@ -40,15 +40,15 @@
         <li ng-show="user" class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown">
             <img class="user-avatar" src="{{user.avatar}}">
-            {{user.name}}
+            <span class="loginme">{{user.name}}</span>
             <b class="caret"></b>
           </a>
           <ul class="dropdown-menu">
-            <li><a ng-click="logout()">Logout</a></li>
+            <span class="loginme"><li><a ng-click="logout()">Logout</a></li></span>
           </ul>
         </li>
         <li>
-          <a ng-hide="user" ng-click="login()">Login</a>
+          <span class="loginme"><a ng-hide="user" ng-click="login()">Login</a></span>
         </li>
       </ul>
     </div>

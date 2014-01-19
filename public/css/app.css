@@ -157,3 +157,8 @@ input {
 	font-weight: 100;
 	font-style: italic;
 }
+#nav .loginme a{
+    color: #FFFFFF;
+    padding-right: 40px;
+    padding-top:40px;
+}
