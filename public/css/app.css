@@ -48,8 +48,13 @@ body {
   color:#ffffff;
 }
 
-.search-result: {
+.tt-dropdown-menu {
   background-color: #fff;
+  border: 1px solid #000;
+}
+
+.tt-suggestion.tt-is-under-cursor {
+  background-color: #ccc;
 }
 
 .song-thumb {
@@ -154,6 +159,7 @@ body {
 input {
 	font-weight: 100;
 }
+
 #by{
 	font-weight: 100;
 	font-style: italic;
@@ -166,15 +172,17 @@ input {
   color: #ffffff;
 }
 
-
 form {
   display: inline;
   text-align: center;
-}#nav .loginme a{
+}
+
+#nav .loginme a{
     color: #FFFFFF;
     padding-right: 40px;
     padding-top:40px;
 }
+
 #postsong {
-padding-left:50px;
+  padding-left:50px;
 }
