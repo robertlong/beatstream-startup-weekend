@@ -16,7 +16,7 @@ function NowPlayingCtrl ($scope, $firebase) {
     if (curSong === null) {
       curSong = 0;
       $('#rdio-api').bind('ready.rdio', function() {
-        Rdio.play(snapshot.val().song);
+        $("#rdio-api").rdio().play(snapshot.val().song);
       });
     }
 
@@ -35,24 +35,24 @@ function NowPlayingCtrl ($scope, $firebase) {
     slide: function(event, ui) {
       var volume = ui.value;
       console.log(volume);
-      Rdio.setVolume(volume/100);
+      $("#rdio-api").rdio().setVolume(volume/100);
     }
   });
 
   $scope.play = function() {
     if (!nowPlaying) {
-      Rdio.play(posts[curSong].song);
+      $("#rdio-api").rdio().play(posts[curSong].song);
       nowPlaying = true;
     }
     else {
-      Rdio.play();
+      $("#rdio-api").rdio().play();
     }
     $('.glyphicon-play').hide();
     $('.glyphicon-pause').show();
   };
 
   $scope.pause = function() {
-    Rdio.pause(posts[curSong].song);
+    $("#rdio-api").rdio().pause(posts[curSong].song);
     $('.glyphicon-pause').hide();
     $('.glyphicon-play').show();
   };
@@ -60,7 +60,7 @@ function NowPlayingCtrl ($scope, $firebase) {
   $scope.next = function() {
     curSong++;
     console.log(posts[curSong].song);
-    Rdio.play(posts[curSong].song);
+    $("#rdio-api").rdio().play(posts[curSong].song);
   };
 
   $scope.previous = function() {
@@ -68,6 +68,6 @@ function NowPlayingCtrl ($scope, $firebase) {
       curSong--;
     }
 
-    Rdio.play(posts[curSong].song);
+    $("#rdio-api").rdio().play(posts[curSong].song);
   };
 }
