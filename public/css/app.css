@@ -181,8 +181,8 @@ form {
 
 #nav .loginme a{
     color: #FFFFFF;
-    padding-right: 40px;
-    padding-top:40px;
+    margin-right: 40px;
+    margin-top:40px;
 }
 
 #postsong {
@@ -197,4 +197,26 @@ form {
 .space{
 	height:30px;
 	background-color:#ffffff;
+}
+
+.dropdown-menu {
+  margin-right: 40px;
+  background-color: #000000;
+}
+
+a.dropdown-toggle {
+  margin-right: 40px;
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+  background-color: #000000;
+  color: #ffffff;
+  text-align: right;
+}
+
+li {
+  display: list-item;
+  text-align: right;
 }
