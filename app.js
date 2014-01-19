@@ -29,7 +29,7 @@ passport.deserializeUser(function(obj, done) {
 passport.use(new RdioStrategy({
     consumerKey: RDIO_API_KEY,
     consumerSecret: RDIO_SHARED_SECRET,
-    callbackURL: "http://localhost:3000/auth/rdio/callback"
+    callbackURL: "/auth/rdio/callback"
   },
   function(token, tokenSecret, profile, done) {
     // asynchronous verification, for effect...
@@ -115,7 +115,10 @@ app.get('/api/search', apiEnsureAuthenticated, function(req, res) {
   });
 });
 
-app.listen(3000);
+var port = process.env.PORT || 3000;
+app.listen(port, function() {
+  console.log("Listening on " + port);
+});
 
 // Simple route middleware to ensure user is authenticated.
 //   Use this route middleware on any resource that needs to be protected.  If
