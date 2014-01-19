@@ -56,20 +56,6 @@
   </nav>
 
   <section id="content" class="container">
-    <div ng-controller="SongsCtrl" class="song-cards-wrapper">
-      <div ng-repeat="song in songs | orderByPriority | reverse">
-        <div class="song-card">
-          <div class="song-card-poster">
-            <img class="user-profile-thumb" src="{{song.user.avatar}}">
-            {{song.user.name}}
-            {{Date.parse(song.date)}}
-          </div>
-          <img ng-click="play(song.song)" class="song-card-thumb" src="{{song.icon}}">
-          <div>
-            {{song.name}} <span id="by">by</span> {{song.artist}} 
-          </div>
-          <div id="caption">
-            {{song.description}}
     <div id="collumns" class="row col-md-12">
     <div id="left" class="col-md-4">
       LOG IN AND PROFILE INFO<br><br>
@@ -91,18 +77,19 @@
     </div>
     <div id="middle" class="col-md-4">
       <div ng-controller="SongsCtrl" class="song-cards-wrapper">
-        <div ng-repeat="song in songs">
-          <div class="song-card">
-            <div class="song-card-poster">
-             <img class="user-profile-thumb" src="{{song.user.avatar}}">
-                {{song.user.name}}
-             </div>
-             <img ng-click="play(song.song)" class="song-card-thumb" src="{{song.icon}}">
-             <div>
-                {{song.name}} <span id="by">by</span> {{song.artist}} 
-             </div>
-             <div id="caption">
-                {{song.description}}
+      <div ng-repeat="song in songs | orderByPriority | reverse">
+        <div class="song-card">
+          <div class="song-card-poster">
+            <img class="user-profile-thumb" src="{{song.user.avatar}}">
+            {{song.user.name}}
+            {{Date.parse(song.date)}}
+          </div>
+          <img ng-click="play(song.song)" class="song-card-thumb" src="{{song.icon}}">
+          <div>
+            {{song.name}} <span id="by">by</span> {{song.artist}} 
+          </div>
+          <div id="caption">
+            {{song.description}}
             </div>
           </div>
           <div class="space"></div>
