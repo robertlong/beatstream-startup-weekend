@@ -79,8 +79,8 @@
 <section id="footer" class="navbar-fixed-bottom">
   <div class="footer-wrap navbar-fixed-bottom">
     <div ng-model="song" ng-controller="NowPlayingCtrl" class="now-playing">
+      <img src="{{song.icon}}" class="song-thumb">
       <div class="song-text">
-          <img src="{{song.icon}}" class="song-thumb">
           <p class="song-title">SONG NAME {{song.name}}</p>
           <p class="song-artist">SONG ARTIST {{song.artist}}</p>
       </div>

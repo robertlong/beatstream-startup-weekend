@@ -52,9 +52,10 @@ body {
 }
 
 .song-thumb {
-  display: inline;
+  display: inline-block;
   height: 50px;
   width: 50px;
+  margin-right: 10px;;
 }
 
 .user-profile-thumb {
@@ -65,13 +66,6 @@ body {
 
 .song-text {
   display: inline-block;
-}
-
-.song-title p {
-  color: #ffffff;
-}
-
-.song-artist p {
   color: #ffffff;
 }
 
@@ -131,4 +125,8 @@ body {
   left: 1px;
   bottom: 1px;
   visibility: hidden;
+}
+
+.now-playing {
+  vertical-align: center;
 }
