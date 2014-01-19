@@ -16,7 +16,9 @@ height: 70px;
     margin-top: 5px;
     padding: 0;
 }
-
+.navbar-nav.navbar-right:last-child {
+margin-top: 25px;
+}
 
 #collumns {
   width: 100%;
