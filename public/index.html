@@ -57,11 +57,12 @@
 
   <section id="content" class="container">
     <div ng-controller="SongsCtrl" class="song-cards-wrapper">
-      <div ng-repeat="song in songs">
+      <div ng-repeat="song in songs | orderByPriority | reverse">
         <div class="song-card">
           <div class="song-card-poster">
             <img class="user-profile-thumb" src="{{song.user.avatar}}">
             {{song.user.name}}
+            {{Date.parse(song.date)}}
           </div>
           <img ng-click="play(song.song)" class="song-card-thumb" src="{{song.icon}}">
           <div>

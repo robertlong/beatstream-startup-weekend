@@ -30,8 +30,6 @@ function PostSongCtrl ($scope) {
 
   $('#song-search').on('typeahead:selected', function (object, datum) {
 
-    console.log()
-
     $scope.post = {
       user: {
         id: CurrentUser.id,
@@ -41,7 +39,8 @@ function PostSongCtrl ($scope) {
       song: datum.tracks[0].foreign_id.split("rdio-US:track:")[1],
       artist: datum.artist_name,
       name: datum.title,
-      icon: "http://placehold.it/400x400"
+      icon: "http://placehold.it/400x400",
+      createdAt: Firebase.ServerValue.TIMESTAMP
     };
   });
 
