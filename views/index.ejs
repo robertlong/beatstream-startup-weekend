@@ -30,7 +30,9 @@
         <div class="form-group">
           <input id="people-search" type="text" class="form-control" placeholder="Find People, Friends, Artists">
         </div>
+        <% if(user){ %>
         <span id="or">or</span>
+         <% } %>
       </form>
       <% if(!user){ %>
         <ul class="nav navbar-nav navbar-right">
@@ -67,7 +69,7 @@
         <div class="song-card">
           <div class="song-card-poster">
             <img class="user-profile-thumb" ng-src="{{song.user.avatar}}">
-            <span>{{song.user.name}}</span>
+            <span class="name-and-time">{{song.user.name}}<br></span>
             <span class='song-card-date' am-time-ago="song.createdAt | toDate"></span>
           </div>
           <img ng-click="play(song.song)" class="song-card-thumb" ng-src="{{song.icon}}">

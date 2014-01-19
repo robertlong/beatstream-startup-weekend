@@ -154,6 +154,9 @@ margin-bottom:-50px;
   height: 64px;
   width: 64px;
 }
+#user-profile-thumb {
+  display: inline;
+}
 
 .song-text {
   display: inline-block;
@@ -206,6 +209,7 @@ margin-bottom:-50px;
   margin-bottom: 10px;
   text-align: left;
   max-width: 400px;
+  max-height: 64px;
   font-weight: 500;
 }
 #caption{
@@ -222,12 +226,14 @@ margin-bottom:-50px;
 .song-card-poster img {
   margin-right: 1em;
   border: 1px solid #777;
+  float: left;
 }
 
 .song-card-thumb {
   max-width:100%;
   max-height:100%;
   margin-bottom:10px;
+  margin-top: 10px;
   border: 2px solid #999999;
 }
 
@@ -237,10 +243,14 @@ margin-bottom:-50px;
 }
 
 .song-card-date {
-  position: absolute;
-  right: 10px;
-  top: 32px;
+  text-align: left;
 }
+#name-and-time {
+  display: inline;
+  vertical-align: middle;
+  max-height: 64px;
+}
+
 
 .volume-slider {
   margin-left: 10px;
@@ -371,8 +381,9 @@ height: 40px;
 margin-right: 5px;
 border: 1px solid #777;
 }
-.song-card-date{
+.song-card-date {
 	font-weight:100;
+  font-size: 12px;
 	font-style:italic;
 }
 
