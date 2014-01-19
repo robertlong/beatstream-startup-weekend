@@ -2,11 +2,11 @@ html,
 body {
   height: 100%;
   font-family: 'Roboto', sans-serif;
-  background-color: #d4d7d7;
+  /*background-color: #d4d7d7;*/
 }
 
 .navbar {
-  background-color: #000000;
+  background-color: #4c5b67;
   min-height: 50px;
   margin-bottom: 0px;
   border-bottom: 2px solid #444444;
@@ -80,7 +80,7 @@ margin-bottom:-50px;
 /* Set the fixed height of the footer here */
 #footer {
   height: 75px;
-  background-color: #000000;
+  background-color: #4c5b67;
   vertical-align: bottom;
 }
 
