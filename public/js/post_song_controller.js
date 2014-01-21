@@ -1,7 +1,7 @@
 function PostSongCtrl ($scope) {
 
   $scope.post = {
-    song_id: null,
+    song: null,
     artist:"",
     name:"",
     description: "",
@@ -46,18 +46,19 @@ function PostSongCtrl ($scope) {
 
   $scope.postSong = function() {
     console.log($scope.post);
-    
-    FirebaseRef.child('posts').push($scope.post);
+    if ($scope.post.song !== null) {
+      FirebaseRef.child('posts').push($scope.post);
 
-    $scope.post = {
-      song_id: null,
-      artist:"",
-      name:"",
-      description: "",
-      icon: ""
-    };
+      $scope.post = {
+        song: null,
+        artist:"",
+        name:"",
+        description: "",
+        icon: ""
+      };
 
-    $('#post-song-modal').modal('hide');
+      $('#post-song-modal').modal('hide');
+    }
   };
 
 }
