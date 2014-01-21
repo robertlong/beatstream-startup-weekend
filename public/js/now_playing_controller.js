@@ -30,8 +30,13 @@ function NowPlayingCtrl ($scope, $firebase) {
 
   $('#rdio-api').bind('playingTrackChanged.rdio', function(e, playingTrack, sourcePosition) {
     $scope.song = playingTrack;
-    SongState.playing = true;
     setTimeout(function(){ $scope.$apply();});
+  });
+
+  $('#rdio-api').bind('positionChanged.rdio', function(e, position) {
+    if (position >= $scope.song.duration) {
+      $scope.next();
+    }
   });
 
   $('#rdio-api').bind('playStateChanged.rdio', function(e, playState) {
@@ -54,13 +59,8 @@ function NowPlayingCtrl ($scope, $firebase) {
     }
   });
 
-  $scope.play = function() {
-    if (!SongState.playing) {
-      $("#rdio-api").rdio().play(posts[SongState.songIndex].song);
-    }
-    else {
-      $("#rdio-api").rdio().play();
-    }
+  $scope.play = function(e) {
+    $("#rdio-api").rdio().play();
   };
 
   $scope.pause = function() {
