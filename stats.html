@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html ng-app="stats">
+<head>
+<title>BeatStream</title>
+
+<!-- Stylesheets go below here, in the order of dependency -->
+<link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/css/bootstrap.css">
+</head>
+
+<body>
+
+<div class='container'>
+  <h1 id='posts'>9001 Posts</h1>
+  </br>
+  <h1 id='users'>9001 Users</h1>
+</div>
+
+<!-- Scripts go below here, in the order of dependency -->
+<script type='text/javascript' src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js'></script>
+<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.3/js/bootstrap.js"></script>
+<script type='text/javascript' src='https://cdn.firebase.com/js/client/1.0.2/firebase.js'></script>
+<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js'></script>
+
+<script>
+var postsRef = new Firebase('https://beatstream.firebaseio.com').child('posts');
+postsRef.on('value', function(snapshot){
+  $('#posts').text(_.keys(snapshot.val()).length + ' Posts');
+
+  var users = _.groupBy(snapshot.val(), function(post){ 
+    return post.user.id; 
+  });
+
+  console.log(users);
+
+  $('#users').text(_.keys(users).length + ' Users');
+});
+</script>
+</body>
+</html>
