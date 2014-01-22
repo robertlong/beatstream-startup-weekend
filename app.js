@@ -47,10 +47,16 @@ passport.use(new RdioStrategy({
   }
 ));
 
-var app = express.createServer();
+var app = express();
 
 // configure Express
 app.configure(function() {
+  app.use(express.basicAuth('beta', 'soulwax'));
+  app.use(function(req, res, next) {
+    req.basicAuthUser = req.user;
+    req.user = null;
+    next();
+  });
   app.set('views', __dirname + '/views');
   app.set('view engine', 'ejs');
   app.use(express.logger());
